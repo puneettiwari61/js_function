@@ -122,14 +122,18 @@ function factorial(n) {
     return input;
   }
   function chooseOperation() {
-    let num = prompt('Enter an integer.');
+    let n = +prompt('Enter an integer.');
     let operator = prompt('Enter one of following operator: sum or product');
     switch (operator){
       case "sum": 
-      return num*(num+1);
-      break;
+    let sum = 0;
+    for (i = 1 ; i <= n ; i++) {
+    sum += i;
+  }
+  return sum;
+  break;
       case "product": 
-      return factorial (num);
+      return factorial (n);
       break;
     }
   }
